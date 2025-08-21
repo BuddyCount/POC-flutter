@@ -5,6 +5,7 @@ import '../models/expense.dart';
 import '../models/group.dart';
 import '../models/person.dart';
 import 'add_expense_screen.dart';
+import 'landing_page.dart';
 import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,6 +25,17 @@ class HomeScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const AddExpenseScreen(),
+                ),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LandingPage(),
                 ),
               );
             },
